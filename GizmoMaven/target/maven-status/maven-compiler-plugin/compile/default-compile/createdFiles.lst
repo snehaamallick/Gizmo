@@ -1,0 +1,8 @@
+gizmomaven\UserController.class
+daoimplementations\StudentDAOImpl.class
+models\Student.class
+models\User.class
+gizmomaven\StudentService.class
+daoimplementations\UserDAOImpl.class
+gizmomaven\GizmoMavenController.class
+gizmomaven\UserService.class

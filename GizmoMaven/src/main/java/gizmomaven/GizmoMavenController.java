@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -36,6 +37,17 @@ import models.Student;
 
 @Controller
 public class GizmoMavenController {
+	@RequestMapping(value={"/cd"})
+	public String loadconfirm()
+	{
+		return "/flow/confirmDetails";
+	}
+	@RequestMapping(value={"/md"})
+	public String loadmember()
+	{
+		return "/flow/memberDetails";
+	}
+	
 	@RequestMapping(value={"/","gotoindex"})
 	public String loadIndexPage()
 	{
@@ -77,7 +89,7 @@ private StudentService ss;
 		//this.us=us;
 	}
 	
-	 @RequestMapping(value = "/students", method = RequestMethod.GET)
+	@RequestMapping(value = "/students", method = RequestMethod.GET)
 	    public String listPersons(Model model) {
 	        model.addAttribute("student", new Student());
 	        model.addAttribute("listfromtable", this.ss.listPersons());
@@ -213,12 +225,12 @@ private StudentService ss;
 	    }
 	
 	
-	@RequestMapping("/studentdetails")
+	/*@RequestMapping("/studentdetails")
 	public String showIndexPage()
 	{
 		return("redirect:/students");
 	}
-	
+	*/
 	/*===========================*/
 	@RequestMapping("/sd")
 	public String loadStudentDetailsPage(Model model)
@@ -272,8 +284,6 @@ private StudentService ss;
    return "redirect:/students";
 }
 	
-
-
 	/*@RequestMapping("/admn")
 	public ModelAndView loadadminpage()
 	{
@@ -286,4 +296,32 @@ private StudentService ss;
 		mv.addObject("myJson", json);
 		return mv;
 	}*/
-}
+
+
+	@RequestMapping(value="/signin", method = RequestMethod.GET)
+    public String login(ModelMap model) {
+     
+    return "signin";
+     
+    }
+     
+    @RequestMapping(value="/loginError", method = RequestMethod.GET)
+    public String loginError(ModelMap model) {
+    model.addAttribute("error", "Invalid Username or Password!!");
+    return "signin";
+     
+    }
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(ModelMap model) {
+        return "index";
+    }
+	/*@RequestMapping("/students")
+	public List<Student> showDetailstoAdmin(Model mp)
+	{
+		List<Student> listtojsp=new ArrayList<Student>();
+		listtojsp=ss.listPersons();
+		mp.addAttribute("listfromtable",listtojsp);
+		return listtojsp;
+	}*/
+	}

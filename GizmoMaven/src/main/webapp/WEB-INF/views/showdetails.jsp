@@ -62,7 +62,7 @@
 		</tr>
 		<tr>
 			<td>
-				<a href = "checkout" class = "btn btn-primary" role = "button">Buy </a> 
+				<a href = "start" class = "btn btn-primary" role = "button">Buy </a> 
             	<a href = "#" class = "btn btn-default" role = "button">Wishlist</a>
             	<a href="#myModal" role="button" data-toggle="modal" class = "btn btn-default">Share with a Friend</a>
             </td>

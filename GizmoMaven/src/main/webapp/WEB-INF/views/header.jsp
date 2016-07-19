@@ -13,11 +13,11 @@
 						class="caret"> </span>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="sd">Android phone</a></li>
+						<li><a href="md">Android phone</a></li>
 
 
 
-						<li><a href="students">I-Phone</a></li>
+						<li><a href="cd">I-Phone</a></li>
 						<li><a href="studentdetails">Windows Phone</a></li>
 					</ul></li>
 				<li class="dropdown"><a class="dropdown-toggle"
@@ -40,7 +40,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="register"><span class="glyphicon glyphicon-user"></span><b>Sign
 							Up</b></a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span><b>Login</b></a></li>
+				<li><a href="signin"><span class="glyphicon glyphicon-log-in"></span><b>Login</b></a></li>
 			</ul>
 		</div>
 	</nav>
